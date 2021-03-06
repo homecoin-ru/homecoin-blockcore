@@ -1,0 +1,2 @@
+# homecoin-blockcore
+ Home CryptoCoin
