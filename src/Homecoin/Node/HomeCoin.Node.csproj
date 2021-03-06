@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+   <PropertyGroup>
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <RuntimeFrameworkVersion>3.1.0</RuntimeFrameworkVersion>
+      <AssemblyName>HomeCoin.Node</AssemblyName>
+      <OutputType>Exe</OutputType>
+      <Authors>HomeCoin Blockcore</Authors>
+   </PropertyGroup>
+
+   <PropertyGroup>
+      <LangVersion>latest</LangVersion>
+      <ServerGarbageCollection>false</ServerGarbageCollection>
+      <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+      <RepositoryUrl>git://github.com/homecoin.ru/homecoin-blockcore</RepositoryUrl>
+      <PackageProjectUrl>https://homecoin.ru</PackageProjectUrl>
+      <PackageTags>blockchain;cryptocurrency;crypto;C#;.NET;bitcoin;blockcore,homecoin</PackageTags>
+      <Description>Home Crypto Coin</Description>
+      <PackageIcon>icon.png</PackageIcon>
+      <Version>1.0.19.1</Version>
+      <Company>HomeCoin Blockcore</Company>
+      <ApplicationIcon>icon.ico</ApplicationIcon>
+   </PropertyGroup>
+
+   <ItemGroup>
+     <ProjectReference Include="..\..\Features\Blockcore.Features.BlockStore\Blockcore.Features.BlockStore.csproj" />
+     <ProjectReference Include="..\..\Features\Blockcore.Features.ColdStaking\Blockcore.Features.ColdStaking.csproj" />
+     <ProjectReference Include="..\..\Features\Blockcore.Features.Consensus\Blockcore.Features.Consensus.csproj" />
+     <ProjectReference Include="..\..\Features\Blockcore.Features.Diagnostic\Blockcore.Features.Diagnostic.csproj" />
+     <ProjectReference Include="..\..\Features\Blockcore.Features.MemoryPool\Blockcore.Features.MemoryPool.csproj" />
+     <ProjectReference Include="..\..\Features\Blockcore.Features.Miner\Blockcore.Features.Miner.csproj" />
+     <ProjectReference Include="..\..\Features\Blockcore.Features.NodeHost\Blockcore.Features.NodeHost.csproj" />
+     <ProjectReference Include="..\..\Features\Blockcore.Features.RPC\Blockcore.Features.RPC.csproj" />
+     <ProjectReference Include="..\..\Features\Blockcore.Features.Wallet\Blockcore.Features.Wallet.csproj" />
+     <ProjectReference Include="..\..\Features\Persistence\Blockcore.Features.BlockStore.Persistence.LevelDb\Blockcore.Features.BlockStore.Persistence.LevelDb.csproj" />
+     <ProjectReference Include="..\..\Features\Persistence\Blockcore.Features.Consensus.Persistence.LevelDb\Blockcore.Features.Consensus.Persistence.LevelDb.csproj" />
+     <ProjectReference Include="..\..\Features\Persistence\Blockcore.Features.Persistence.LevelDb.CorePackage\Blockcore.Features.Persistence.LevelDb.CorePackage.csproj" />
+     <ProjectReference Include="..\..\Features\Persistence\Blockcore.Persistence.LevelDb\Blockcore.Persistence.LevelDb.csproj" />
+     <ProjectReference Include="..\Network\Homecoin.Network.csproj" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <None Include="icon.png">
+       <Pack>True</Pack>
+       <PackagePath></PackagePath>
+     </None>
+     <None Include="..\HomeCoin\icon.png">
+       <Pack>True</Pack>
+       <PackagePath></PackagePath>
+     </None>
+   </ItemGroup>
+
+</Project>
