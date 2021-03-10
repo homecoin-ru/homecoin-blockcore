@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Blockcore.Consensus.Checkpoints;
-using HomeCoin.Networks;
 using HomeCoin.Networks.Setup;
 using NBitcoin;
 
@@ -37,8 +36,8 @@ namespace HomeCoin
             DefaultRPCPort = 33332,
             DefaultAPIPort = 33333,
             DefaultSignalRPort = 33334,
-            PubKeyAddress = 40, // B https://en.bitcoin.it/wiki/List_of_address_prefixes
-            ScriptAddress = 100, // b
+            PubKeyAddress = 40, // H https://en.bitcoin.it/wiki/List_of_address_prefixes
+            ScriptAddress = 100, // h
             SecretAddress = 160,
             GenesisTime = 1614259698,
             GenesisNonce = 60494,
@@ -48,7 +47,7 @@ namespace HomeCoin
             HashGenesisBlock = "00000ae66e376bf115b9440f03a520bd88d28624ec6f13606b0d72051e56e635",
             HashMerkleRoot = "f54bfdb51ebda155c70525ed6ef4fee32ca2564b8532767661acf42015cd5542",
             DNS = new[] { "seed.homecoin.ru", "seed2.homecoin.ru", "seed3.homecoin.ru", "seed4.homecoin.ru", "seed5.homecoin.ru" },
-            Nodes = new[] { "167.86.77.3", "167.86.126.130", "158.101.197.109", "158.101.196.76", "40.76.201.247" },
+            Nodes = new[] { "167.86.77.3", "167.86.126.130", "158.101.197.109", "158.101.206.15", "40.76.201.247" },
             Checkpoints = new Dictionary<int, CheckpointInfo>
             {
                 { 0, new CheckpointInfo(new uint256("0x00000ae66e376bf115b9440f03a520bd88d28624ec6f13606b0d72051e56e635"), new uint256("0x0000000000000000000000000000000000000000000000000000000000000000")) }, // Genisis

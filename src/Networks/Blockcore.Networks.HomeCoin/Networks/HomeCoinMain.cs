@@ -43,7 +43,7 @@ namespace HomeCoin.Networks
 
             this.DefaultMaxOutboundConnections = 16;
             this.DefaultMaxInboundConnections = 109;
-            this.MaxTipAge = 2 * 60 * 60; // 2 * 60 * 60;
+            this.MaxTipAge = 2 * 60 * 60;
             this.MinTxFee = Money.Coins(0.0001m).Satoshi;
             this.MaxTxFee = Money.Coins(1).Satoshi;
             this.FallbackFee = Money.Coins(0.0001m).Satoshi;
@@ -217,15 +217,13 @@ namespace HomeCoin.Networks
                 .Register<CheckDifficultyHybridRule>()
 
                 // rules that require the store to be loaded (coinview)
-                //?? .Register<LoadCoinviewRule>() bad-txns-BIP30 
                 .Register<FetchUtxosetRule>()
                 .Register<TransactionDuplicationActivationRule>()
                 .Register<CheckPosUtxosetRule>() // implements BIP68, MaxSigOps and BlockReward calculation
                                                  // Place the PosColdStakingRule after the PosCoinviewRule to ensure that all input scripts have been evaluated
                                                  // and that the "IsColdCoinStake" flag would have been set by the OP_CHECKCOLDSTAKEVERIFY opcode if applicable.
-                                                 //!! must be above OR BAD_TX_BIP_30 error .Register<TransactionDuplicationActivationRule>()
+                                                
                 .Register<PosColdStakingRule>()
-                //?? .Register<SaveCoinviewRule>()
                 .Register<PushUtxosetRule>()
                 .Register<FlushUtxosetRule>();
 
