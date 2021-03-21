@@ -39,7 +39,7 @@ namespace HomeCoin
             PubKeyAddress = 40, // H https://en.bitcoin.it/wiki/List_of_address_prefixes
             ScriptAddress = 100, // h
             SecretAddress = 160,
-            GenesisTime = 1614259698,
+            GenesisTime = 1614259698, // Thu, 25 Feb 2021 13:28:18 GMT
             GenesisNonce = 60494,
             GenesisBits = 0x1E0FFFFF,
             GenesisVersion = 1,
@@ -53,6 +53,8 @@ namespace HomeCoin
                 { 0, new CheckpointInfo(new uint256("0x00000ae66e376bf115b9440f03a520bd88d28624ec6f13606b0d72051e56e635"), new uint256("0x0000000000000000000000000000000000000000000000000000000000000000")) }, // Genisis
                 { 2, new CheckpointInfo(new uint256("0x346e8a928dc03b3d92249cc67666d905a92b09f18b7bb5308198d7a28562bd98"), new uint256("0x8503c0bca8aeca76ed38648896d164637bf7229f5d9865d2b26448d448675c43")) }, // Premine
                 { 1000, new CheckpointInfo(new uint256("0x10b7137bc293d3c9426b29548ff902fca123f60e7af8a844c8fa151a736dbb37"), new uint256("0x228f509a5761ca04c14e2c3aa1b2a3249485525dbc9c33e19271e13404c0a7ee")) },
+                { 29000, new CheckpointInfo(new uint256("0x1066ab12b26a964e1a2150ea0cec5213b5eb4bf6f695b64638642c028f91f2bf"), new uint256("0x315797a53b9c3a3199bbe140a4c2f854ff3fb8392ee711a82eb4aae8cbb020a0")) },
+                { 33333, new CheckpointInfo(new uint256("0x936c51d7b2ca2d006f0b0f7c698536b559a63b34c660746ee12bcc4692e712f1"), new uint256("0x7a5fc14bd3863cc1b53141a28d07be05f00186c6383c8d0a0dc2c2b644aca1b6")) },
             }
         };
 
